@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Toastr Example</title>
+
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+
+<body>
+
+    <input type="button" value="Error" id="error" />
+    <input type="button" value="Info" id="info" />
+    <input type="button" value="Warning" id="warning" />
+    <input type="button" value="Success" id="success" />
+
+    <br><br><br><br>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        $(function () {
+
+            $('#error').click(function () {
+                toastr.error("Noooo oo oo ooooo!!!", "Title", {
+                    timeOut: 0,
+                    extendedTimeOut: 0,
+                    closeButton: true
+                });
+            });
+
+            $('#info').click(function () {
+                toastr.info("Info Message", "Title");
+            });
+
+            $('#warning').click(function () {
+                toastr.warning("Warning");
+            });
+
+            $('#success').click(function () {
+                toastr.success("YYEESSSSSSS");
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
